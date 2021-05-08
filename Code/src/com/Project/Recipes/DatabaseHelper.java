@@ -734,8 +734,8 @@ public class DatabaseHelper {
     public static void printFacts(Connection c){
         // Show how many recipes, ingredients, cuisines
         try{
-            String[][] queries = {{"COUNT(*)", "RecipeInfo"}, {"COUNT(*)", "Types"},
-                    {"COUNT(*)", "Cuisines"} };
+            String[][] queries = {{"COUNT(RecipeID)", "RecipeInfo"}, {"COUNT(TypeID)", "Types"},
+                    {"COUNT(CuisineID)", "Cuisines"} };
             String[] printing = {"Number of recipes; ","Number of types: ", "Number of Cuisines: "};
             int[] results = new int[printing.length];
             for(String[] query : queries){
@@ -776,7 +776,7 @@ public class DatabaseHelper {
         String fromClause = " FROM " + tableName;
         //WHERE
         if(columnSearch.length != 0){
-            whereClause = " WHERE ";
+            whereClause = "WHERE ";
             for(int i = 0; i < columnSearch.length; i++){
                 whereClause += columnSearch[i] + " = ";
                 if(columnSearchValues[i] instanceof String){
@@ -813,6 +813,18 @@ public class DatabaseHelper {
         Statement statement = conn.createStatement();
         ResultSet resultSet = statement.executeQuery(queryString);
         return resultSet;
+    }
+
+    public static void updateStock(Connection c, boolean newValue, String ingredientKey){
+        // UPDATE Ingredient SET inStock = update WHERE IngredientID = ingredientKey;
+        try{
+            Statement statement = c.createStatement();
+            statement.executeUpdate(String.format("UPDATE Ingredients SET inStock = %1$s WHERE IngredientID = %2$s;",
+                    newValue, ingredientKey));
+        }
+        catch(SQLException e){
+            System.out.println(e.getMessage());
+        }
     }
 }
 

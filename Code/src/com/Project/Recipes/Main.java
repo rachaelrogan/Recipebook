@@ -264,6 +264,16 @@ public class Main {
                     System.out.println("Here are some facts about your recipe book:");
                     DatabaseHelper.printFacts(c);
                     break;
+                case "U":
+                    System.out.println("What ingredient do you want to update?");
+                    userInput = scanner.nextLine();
+                    Integer keyInt = DatabaseHelper.getKey(c, "IngredientID", "Ingredients",
+                            "IngredientName", userInput);
+                    System.out.println(keyInt);
+                    System.out.println("What is the value you want to set? (true or false)");
+                    userInput = scanner.nextLine();
+                    DatabaseHelper.updateStock(c, Boolean.parseBoolean(userInput), keyInt.toString());
+                    break;
                 case "X":
                     programRuns = false;
                     System.out.println("Goodbye!");
