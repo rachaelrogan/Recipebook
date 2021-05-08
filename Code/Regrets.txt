@@ -1,0 +1,8 @@
+- getRowResults - put everything into its own object - have it completely parsed instead of a string
+- think and plan more before coding
+	- what kind of queries we will need
+	- how similar funcationality will need to be used
+- the mainIngredient thing was a pain in the butt
+- forgot about the whole overloading methods thing so I ended up changing
+  all these references...
+- separate functions for each part of the query would have been a good idea

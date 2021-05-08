@@ -1,0 +1,9 @@
+Title,MainIngredient,Cuisine,Type,Servings,PrepTime,Link,Other Ingredients,Equipment Needed
+Pad Thai Pizza,Pad Thai Sauce,Thai,Main,3,30,,"Pizza Crust, Mozzerella, Chicken, Shredded Carrots, Green Onion, Cilantro",Oven
+Spaghetti,Pasta,Italian,Main,,30,,"Sphaghetti, Marinara Sauce, Parmesean Cheese","Stove, Collander "
+Tacos,Beef,Mexican,Main,4,30,,"Taco Shells, Taco Seasoning",Frying Pan
+Lemon Garlic Kale,Kale,,Side,3,10,https://www.thekitchn.com/how-to-cook-kale-261979,"Lemon, Garlic",Frying Pan
+Butter Pecan Chicken,Chicken,,Main,4,90,https://www.delish.com/cooking/recipe-ideas/a34132404/butter-pecan-chicken-bites-recipe/,"Pecans, Butter, Eggs, Brown Sugar, Flour, Cayenne",Cookie Sheet
+Lemon Chicken and Asparagus Stir-Fry,Chicken,Asian,Main,3,30,https://tasty.co/recipe/lemon-chicken-and-asparagus-stir-fry,"Garlic, Asparagus, Lemon",Frying Pan
+Chocolate Chip Cookies,Sugar,American,Dessert,6,60,https://www.allrecipes.com/recipe/10813/best-chocolate-chip-cookies/,"Butter, White Sugar, Brown Sugar, Eggs, Vanilla Extract, Baking Soda, Water, Flour, Semisweet Chocolate Chips, Walnuts",Cookie Sheet
+Ravioli,Pasta,Italian,Main,4,30,,"Ravioli, Marinara Sauce",Collander
